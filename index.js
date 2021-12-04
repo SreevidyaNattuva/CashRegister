@@ -1,17 +1,20 @@
-const billAmount = document.querySelector("#bill-amount");
-const cashGiven = document.querySelector("#cash-given");
-const checkButton = document.querySelector("#check-button");
-const errorMessage = document.querySelector("#error-message");
-const noOfNotes = document.querySelectorAll(".no-of-notes");
+var billAmount = document.querySelector("#bill-amount");
+var cashGiven = document.querySelector("#cash-given");
+var checkButton = document.querySelector("#check-button");
+var errorMessage = document.querySelector("#error-message");
+var noOfNotes = document.querySelectorAll(".no-of-notes");
 var notesArray = [2000, 500, 100, 20, 10,5,1];
 checkButton.addEventListener("click", function validateAmount(){
-    console.log(isNaN(billAmount.value));
+    //console.log(isNaN(billAmount.value));
     errorMessage.style.display = "none";
-    if((billAmount.value>0) && !(isNaN(billAmount.value))){
-       if(cashGiven.value>0){
-           if(cashGiven.value>= billAmount.value){
+    var bill = Number(billAmount.value);
+    var cash = Number(cashGiven.value);
+    console.log("Bill"+bill,cash);
+    if(bill>0){
+       if(cash>0){
+           if(cash>= bill){
                
-             const returnAmount = cashGiven.value - billAmount.value;
+             var returnAmount = cash - bill;
              console.log(returnAmount);
              calculateNoOfNotes(returnAmount);
            }
