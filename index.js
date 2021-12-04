@@ -12,11 +12,14 @@ checkButton.addEventListener("click", function validateAmount(){
     console.log("Bill"+bill,cash);
     if(bill>0){
        if(cash>0){
-           if(cash>= bill){
+           if(cash>bill){
                
              var returnAmount = cash - bill;
              console.log(returnAmount);
              calculateNoOfNotes(returnAmount);
+           }
+           else if(cash== bill){
+            showErrorMessage("Bill payed correctly");  
            }
            else{
             showErrorMessage("Cash given must be equal to or greater than bill amount");
