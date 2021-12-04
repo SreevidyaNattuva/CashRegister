@@ -11,7 +11,7 @@ checkButton.addEventListener("click", function validateAmount(){
     var cash = Number(cashGiven.value);
     console.log("Bill"+bill,cash);
     if(bill>0){
-       if(cash>0){
+       if(cash>=0){
            if(cash>bill){
                
              var returnAmount = cash - bill;
