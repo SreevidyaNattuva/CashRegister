@@ -16,7 +16,7 @@ checkButton.addEventListener("click", function validateAmount(){
              calculateNoOfNotes(returnAmount);
            }
            else{
-            showErrorMessage("Cash given must be equal to bill amount");
+            showErrorMessage("Cash given must be equal to or greater than bill amount");
            }
        }
     }
