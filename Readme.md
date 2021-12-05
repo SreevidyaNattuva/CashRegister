@@ -1,0 +1,1 @@
+This app takes two inputs bill to be paid and cash paid by customer and returns minimum number of notes required to pay balance. HTML, CSS, JS are used to design this app.
